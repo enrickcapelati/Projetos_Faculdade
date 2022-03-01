@@ -1,10 +1,17 @@
 opção = 0
-class carro:
+class Carro:
     def __init__(self,marca,modelo,ano,placa):
         self.marca  = marca
         self.modelo = modelo
         self.ano    = ano
         self.placa  = placa
+
+def user_input():        
+    marca  = input('Digite a marca:')
+    modelo = input('Digite o modelo:')
+    ano    = input('Digite o ano: ')
+    placa  = input('Digite a placa:') 
+
 while opção != 5:
     print('''CADASTRO DE VEICULOS
 [1] CADASTRAR NOVO VEICULO
@@ -15,10 +22,7 @@ while opção != 5:
 ''')
     opção = int(input('Digite sua opcao: '))
     if opção == 1:
-        marca = input('Digite o marca do veiculo: ') 
-        modelo = input('Digite a modelo do veiculo: ') 
-        ano = input('Digite o ano do veiculo:')
-        placa = input('Digite a placa do veiculo:') 
+        user_input()
         
     elif opção == 2:
         print('opcao 2')
