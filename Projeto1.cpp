@@ -4,21 +4,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
- 
+
 
 typedef struct carro
 
 {
 
-  int cod;
+int cod;
 
-  char marca [20];
+char marca [20];
 
-  char modelo [20];
+char modelo [20];
 
-  int ano;
+int ano;
 
-  char placa[10];
+char placa[10];
 
 }carro;
 
@@ -34,291 +34,291 @@ void cadastrar();
 
 int main(int argc, char** argv) {
 
-               setlocale(LC_ALL,"portuguese");
+setlocale(LC_ALL,"portuguese");
 
-               int i;
+int i;
 
-               int op;
+int op;
 
-               int ano;
+int ano;
 
-               int z;
+int z;
 
-               char modelo[20];
+char modelo[20];
 
-               z=0;
+z=0;
 
-               ano=0;
+ano=0;
 
-               i=0;
+i=0;
 
-               car[i].cod = 0;
+car[i].cod = 0;
 
-               strcpy(car[i].marca,"NULL");
+strcpy(car[i].marca,"NULL");
 
-               strcpy(car[i].modelo,"NULL");
+strcpy(car[i].modelo,"NULL");
 
-               strcpy(car[i].placa,"NULL");
+strcpy(car[i].placa,"NULL");
 
-               car[i].ano = 0;
+car[i].ano = 0;
 
-               do
-               {
+do
+{
 
-                              printf("\n Op√ß√µes:");
+printf("\n OpÁıes:");
 
-                              printf("\n 1. CADASTRAR VE√çCULO");
+printf("\n 1. CADASTRAR VEÕCULO");
 
-                              printf("\n 2. LISTAR VE√çCULOS");
+printf("\n 2. LISTAR VEÕCULOS");
 
-                              printf("\n 3. PESQUISAR UM MODELO");
+printf("\n 3. PESQUISAR UM MODELO");
 
-                              printf("\n 4. MOSTRAR VE√çCULOS A PARTIR DE UM ANO");
+printf("\n 4. MOSTRAR VEÕCULOS A PARTIR DE UM ANO");
 
-                              printf("\n 5. SAIR");
+printf("\n 5. SAIR");
 
-                              printf("\n \n DIGITE A OP√á√ÉO: ");
+printf("\n \n DIGITE A OP«√O: ");
 
-                              scanf("%d",&op);
+scanf("%d",&op);
 
-                              switch(op)
+switch(op)
 
-                              {
+{
 
-                                              case 1:
+case 1:
 
-                                                              if (car[i].cod<=9)
+if (car[i].cod<=9)
 
-                                                              {
+{
 
-                                                                              car[i].cod=i;
+car[i].cod=i;
 
-                                                                              printf("\n Digite a marca do ve√≠culo:");
+printf("\n Digite a marca do veÌculo:");
 
-                                                                              scanf("%s",&car[i].marca);
+scanf("%s",&car[i].marca);
 
-                                                                              printf("\n Digite o modelo do ve√≠culo:");
+printf("\n Digite o modelo do veÌculo:");
 
-                                                                              scanf("%s",&car[i].modelo);
+scanf("%s",&car[i].modelo);
 
-                                                                              printf("\n Digite a placa do ve√≠culo:");
+printf("\n Digite a placa do veÌculo:");
 
-                                                                              scanf("%s",&car[i].placa);
+scanf("%s",&car[i].placa);
 
-                                                                              printf("\n Digite o ano do ve√≠culo:");
+printf("\n Digite o ano do veÌculo:");
 
-                                                                              scanf("%d",&car[i].ano);
+scanf("%d",&car[i].ano);
 
-                                                                              i=i+1;
+i=i+1;
 
-                                                                             
 
-                                                              }
 
-                                                             
+}
 
-                                                              else
 
-                                                             
 
-                                                              {
+else
 
-                                                                              printf("\n Limite de cadastro √© 10!");
 
-                                                              }
 
-                                                             
+{
 
-                                                              break;
+printf("\n Limite de cadastro È 10!");
 
-                                                             
+}
 
-                                                              case 2:
 
-                                                                              for(int x=0; x<i; x++)
 
-                                                                             
+break;
 
-                                                                              {
 
-                                                                                             printf("\n A marca do ve√≠culo √©: %s",car[x].marca);
 
-                                                                                             printf("\n O modelo do ve√≠culo √©: %s",car[x].modelo);
+case 2:
 
-                                                                                             printf("\n O ano do ve√≠culo √©: %d",car[x].ano);
+for(int x=0; x<i; x++)
 
-                                                                                             printf("\n A placa do ve√≠culo √©: %s",car[x].placa);
 
-                                                                                             printf("\n\n =================================== \n \n");
 
-                                                                              }
+{
 
-                                                                             
+printf("\n A marca do veÌculo È: %s",car[x].marca);
 
-                                                                              break;
+printf("\n O modelo do veÌculo È: %s",car[x].modelo);
 
-                                                                             
+printf("\n O ano do veÌculo È: %d",car[x].ano);
 
-                                                                              case 3:
+printf("\n A placa do veÌculo È: %s",car[x].placa);
 
-                                                                                             printf("\n   INSIRA O MODELO A SER PESQUISADO:");
+printf("\n\n =================================== \n \n");
 
-                                                                                             scanf("%s",&modelo);
+}
 
-                                                                                             for (int x=0; x<i; x++)
 
-                                                                                             
 
-                                                                                             {
+break;
 
-                                                                                                             if (strcmp(car[x].modelo,strlwr(modelo)) == 0)
 
-                                                                                                             {
 
-                                                                                                                             printf("\n A marca do ve√≠culo √©: %s",car[x].marca);
+case 3:
 
-                                                                                                                             printf("\n O modelo do ve√≠culo √©: %s",car[x].modelo);
+printf("\n INSIRA O MODELO A SER PESQUISADO:");
 
-                                                                                                                             printf("\n O ano do ve√≠culo √©: %d",car[x].ano);
+scanf("%s",&modelo);
 
-                                                                                                                             printf("\n A placa do ve√≠culo √©: %s",car[x].placa);
+for (int x=0; x<i; x++)
 
-                                                                                                                             printf("\n\n =================================== \n \n");
 
-                                                                                                                             
 
-                                                                                                                             z++;
+{
 
-                                                                                                             }
+if (strcmp(car[x].modelo,strlwr(modelo)) == 0)
 
-                                                                                                             
+{
 
-                                                                                             }
+printf("\n A marca do veÌculo È: %s",car[x].marca);
 
-                                                                                             
+printf("\n O modelo do veÌculo È: %s",car[x].modelo);
 
-                                                                                             if (z==0)
+printf("\n O ano do veÌculo È: %d",car[x].ano);
 
-                                                                                             
+printf("\n A placa do veÌculo È: %s",car[x].placa);
 
-                                                                                             {
+printf("\n\n =================================== \n \n");
 
-                                                                                                             printf("\n N√ÉO FOI ENCONTRADO O MODELO %s \n\n",modelo);
 
-                                                                                             }
 
-                                                                                             
+z++;
 
-                                                                                             else
+}
 
-                                                                                             
 
-                                                                                             {
 
-                                                                                                             z=0;
+}
 
-                                                                                             }
 
-                                                                             
 
-                                                                              break;
+if (z==0)
 
-                                                                             
 
-                                                                              case 4:
 
-                                                                                             printf("\n     INSIRA O ANO A SER PESQUISADO:");
+{
 
-                                                                                             scanf("%d",&ano);
+printf("\n N√O FOI ENCONTRADO O MODELO %s \n\n",modelo);
 
-                                                                                             
+}
 
-                                                                                             for (int x=0; x<i; x++)
 
-                                                                                             {
 
-                                                                                                             if (car[x].ano >= ano)
+else
 
-                                                                                                             
 
-                                                                                                             {
 
-                                                                                                                             printf("\n A marca do ve√≠culo √©: %s",car[x].marca);
+{
 
-                                                                                                                             printf("\n O modelo do ve√≠culo √©: %s",car[x].modelo);
+z=0;
 
-                                                                                                                             printf("\n O ano do ve√≠culo √©: %d",car[x].ano);
+}
 
-                                                                                                                             printf("\n A placa do ve√≠culo √©: %s",car[x].placa);
 
-                                                                                                                             printf("\n\n =================================== \n \n");
 
-                                                                                                                             
+break;
 
-                                                                                                                             z++;
 
-                                                                                                             }
 
-                                                                                             }
+case 4:
 
-                                                                                             
+printf("\n INSIRA O ANO A SER PESQUISADO:");
 
-                                                                                             if (z==0)
-                                                                                            
-                                                                                             {
+scanf("%d",&ano);
 
-                                                                                                             printf("\n N√ÉO FOI ENCONTRADO VE√çCULOS ACIMA DE %d \n\n",ano);
 
-                                                                                             }
-                                                                                            
-                                                                                             else
 
-                                                                                        
-                                                                                             {
+for (int x=0; x<i; x++)
 
-                                                                                                             z=0;
+{
 
-                                                                                             }
-                                                                         
-                                                                              break;
+if (car[x].ano >= ano)
 
-                                                                              default:
 
-                                                                                             printf("\n Op√ß√£o n√£o existe");
 
-                                                                                             
+{
 
-                                                                                             break;
-                                                              }
+printf("\n A marca do veÌculo È: %s",car[x].marca);
 
-                              }
+printf("\n O modelo do veÌculo È: %s",car[x].modelo);
 
-                              while (op!=5 && i<=9);
+printf("\n O ano do veÌculo È: %d",car[x].ano);
 
-                              if (i==9)
+printf("\n A placa do veÌculo È: %s",car[x].placa);
 
-                              {
+printf("\n\n =================================== \n \n");
 
-                                              printf("\n \n LIMITE DE VE√çCULOS ALCAN√áADO! \n \n \n");
 
-                              }
 
-                              for (int y=0; y<i; y++)
+z++;
 
-                              {
+}
 
-                                              printf("\n A marca do ve√≠culo √©: %s",car[y].marca);
+}
 
-                                              printf("\n O modelo do ve√≠culo √©: %s",car[y].modelo);
 
-                                              printf("\n O ano do ve√≠culo √©: %d",car[y].ano);
 
-                                              printf("\n A placa do ve√≠culo √©: %s",car[y].placa);
+if (z==0)
 
-                                              printf("\n\n =================================== \n \n");
+{
 
-                              }
-               
-               return 0;
+printf("\n N√O FOI ENCONTRADO VEÕCULOS ACIMA DE %d \n\n",ano);
+
+}
+
+else
+
+
+{
+
+z=0;
+
+}
+
+break;
+
+default:
+
+printf("\n OpÁ„o n„o existe");
+
+
+
+break;
+}
+
+}
+
+while (op!=5 && i<=9);
+
+if (i==9)
+
+{
+
+printf("\n \n LIMITE DE VEÕCULOS ALCAN«ADO! \n \n \n");
+
+}
+
+for (int y=0; y<i; y++)
+
+{
+
+printf("\n A marca do veÌculo È: %s",car[y].marca);
+
+printf("\n O modelo do veÌculo È: %s",car[y].modelo);
+
+printf("\n O ano do veÌculo È: %d",car[y].ano);
+
+printf("\n A placa do veÌculo È: %s",car[y].placa);
+
+printf("\n\n =================================== \n \n");
+
+}
+
+return 0;
 
 }

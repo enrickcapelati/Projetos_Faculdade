@@ -6,11 +6,16 @@ class Carro:
         self.ano    = ano
         self.placa  = placa
 
+lista=[]
+
 def user_input():        
     marca  = input('Digite a marca:')
     modelo = input('Digite o modelo:')
     ano    = input('Digite o ano: ')
     placa  = input('Digite a placa:') 
+    carro  = Carro(marca,modelo,ano,placa,carro)
+    lista.append(carro)
+
 
 while opção != 5:
     print('''CADASTRO DE VEICULOS
