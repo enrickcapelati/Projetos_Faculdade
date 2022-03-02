@@ -5,8 +5,13 @@ class Carro:
         self.modelo = modelo
         self.ano    = ano
         self.placa  = placa
-
+    def __str__(self):
+        return  str(self.__class__) + '\n'+ '\n'.join(('{} = {}'.format(item, self.__dict__[item]) for item in self.__dict__))
 lista=[]
+
+def listar():
+    for i in lista:
+        print(i)
 
 def user_input():        
     marca  = input('Digite a marca:')
@@ -15,6 +20,8 @@ def user_input():
     placa  = input('Digite a placa:') 
     carro  = Carro(marca,modelo,ano,placa,carro)
     lista.append(carro)
+
+
 
 
 while opção != 5:
@@ -30,7 +37,7 @@ while opção != 5:
         user_input()
         
     elif opção == 2:
-        print('opcao 2')
+        listar()
         
     elif opção == 3:
         print('opcao 3')
