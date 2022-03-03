@@ -20,7 +20,7 @@ def user_input():
     carro  = Carro(marca,modelo,ano,placa)
     lista.append(carro)
  
-
+ 
 def listar():
     for l in lista:
         print(l)
@@ -32,8 +32,7 @@ def busca_modelo():
             print(l)
         else:
             print('Modelo não encontrado!')
-            continue
-
+            
 def ano_busca():
     ano = input ('Digite o ano a ser pesquisado: ').lower()
     for l in lista:
@@ -51,17 +50,20 @@ while opção != 5:
 [4] MOSTRAR VEICULO A PARTIR DO ANO
 [5] SAIR
 ''')
-    opção = int(input('Digite sua opção: '))
+    opção = input('Digite sua opção: ')
 
-    if opção == 1:
-         user_input()
-    elif opção == 2:
+    if opção == '1':
+        if len(lista) <=10:
+            user_input()
+        else:
+            print('O limite de cadastros é 10!')
+    elif opção == '2':
         listar()
-    elif opção == 3:
+    elif opção == '3':
         busca_modelo()
-    elif opção == 4:
+    elif opção == '4':
         ano_busca()
-    elif opção == 5:
+    elif opção == '5':
         print('Finalizando...')
     else:
         print('Opção inválida tente novamente!')
