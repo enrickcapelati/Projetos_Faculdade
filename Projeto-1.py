@@ -1,4 +1,4 @@
-opção = 0
+opcao = 0
 carro=0
 lista=[]
 
@@ -53,7 +53,7 @@ def listar():
         print(l)
 
 
-def busca_modelo():
+def buscar_modelo():
 
     '''Realiza busca de carros por modelo'''
 
@@ -65,7 +65,7 @@ def busca_modelo():
             print('Modelo não encontrado!')
             
 
-def ano_busca():
+def buscar_ano():
 
     '''Realiza busca de carros a partir de um ano'''
 
@@ -83,16 +83,18 @@ def vagas_livres():
 
     '''Retorna a quantidade de vagas restantes para cadastro de carros'''
 
-    return 10-len(lista)        
+    valor_maximo_veiculos = 10
+
+    return valor_maximo_veiculos-len(lista)        
 
 
-while opção != 5:
+while opcao != 5:
 
     menu()
 
-    opção = input('Digite sua opção: ')
+    opcao = input('Digite sua opção: ')
 
-    if opção == '1':
+    if opcao == '1':
 
         if len(lista) <=10:
             user_input()
@@ -100,20 +102,20 @@ while opção != 5:
         else:
             print('O limite de cadastros é 10!')
 
-    elif opção == '2':
+    elif opcao == '2':
         listar()
 
-    elif opção == '3':
-        busca_modelo()
+    elif opcao == '3':
+        buscar_modelo()
 
-    elif opção == '4':
-        ano_busca()
+    elif opcao == '4':
+        buscar_ano()
 
-    elif opção == '5':
+    elif opcao == '5':
         print('Finalizando...')
 
     else:
         print('Opção inválida tente novamente!')
     print('=-=' * 10)
-    
+
 print('Fim do programa!')
